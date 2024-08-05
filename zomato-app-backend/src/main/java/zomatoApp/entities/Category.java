@@ -8,36 +8,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
 @Entity
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
-public class Food {
-
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private String description;
-    private String price;
-
-    private Category foodCategory;
-
-    private List<String> images;
-
-    private boolean available;
 
     private Restaurant restaurant;
-
-    private boolean isVegetarian;
-    private boolean isSeasonal;
-
-    private List<String> ingredients = new ArrayList<>();
-
-    private Date creationDate;
 }
